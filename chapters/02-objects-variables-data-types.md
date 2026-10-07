@@ -1,4 +1,4 @@
-Introduction to R and RStudio
+Objects, Variables, and Basic Data Types
 ================
 Sandeep Kumar Singh, PhD
 

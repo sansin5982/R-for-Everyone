@@ -1,4 +1,4 @@
-Introduction to R and RStudio
+Operators, Expressions, and Logical Conditions
 ================
 Sandeep Kumar Singh, PhD
 
