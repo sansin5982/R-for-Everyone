@@ -1,0 +1,9 @@
+theme: jekyll-theme-cayman
+
+# Navigation (Optional)
+title: "R for Everyone"
+description: "Fundamentals of R."
+
+# Enable navigation links
+include:
+  - chapters/
