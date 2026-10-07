@@ -4,13 +4,13 @@ Sandeep Kumar Singh, PhD
 
 # Introduction to R and RStudio
 
-## Why learn R for biomedical research?
+## Why learn R?
 
-Modern biomedical, epidemiological, public-health, and genomic research
-generates data that must be inspected, cleaned, summarized, analyzed,
-visualized, and reported reproducibly. R is a programming language and
-statistical-computing environment designed especially well for these
-tasks.
+Modern statistical, biomedical, epidemiological, public-health, and
+genomic research generates data that must be inspected, cleaned,
+summarized, analyzed, visualized, and reported reproducibly. R is a
+programming language and statistical-computing environment designed
+especially well for these tasks.
 
 A researcher may use R to answer questions such as:
 
@@ -28,28 +28,8 @@ instructions, storing results, inspecting objects, writing scripts, and
 organizing research work reproducibly.
 
 > **Learning principle:** Do not try to memorize every command. Learn
-> how R thinks, how to inspect what you have, and how to find help when
-> you need it.
-
-## Learning objectives
-
-After completing this chapter, you should be able to:
-
-1.  explain the difference between R and RStudio;
-2.  recognize the major parts of the RStudio interface;
-3.  use R as a calculator;
-4.  create and inspect simple objects;
-5.  understand assignment with `<-`;
-6.  distinguish commands entered in the Console from code stored in an R
-    script;
-7.  use comments to document code;
-8.  call simple R functions;
-9.  create a small collection of measurements with `c()`;
-10. obtain simple summaries of those measurements;
-11. understand the purpose of the working directory and file paths;
-12. use R’s built-in help system;
-13. recognize common beginner errors; and
-14. write and save a small reproducible R script.
+> how R thinks, how to inspect what we have, and how to find help when
+> we need it.
 
 ------------------------------------------------------------------------
 
@@ -108,19 +88,19 @@ exact positions can be customized, but the functions remain similar.
 ### Source pane
 
 The Source pane is where scripts and other source documents are opened
-and edited. A script lets you save code so that it can be reviewed,
+and edited. A script lets us save code so that it can be reviewed,
 corrected, and rerun later.
 
 ### Console pane
 
-The Console is where R actually executes commands. You will usually see
-a prompt such as:
+The Console is where R actually executes commands. We will usually see a
+prompt such as:
 
 ``` text
 >
 ```
 
-If you type:
+If we type:
 
 ``` r
 2 + 3
@@ -131,7 +111,7 @@ and press Enter, R evaluates the expression immediately.
 ### Environment pane
 
 The Environment shows objects currently available in the R session. If
-you create:
+we create:
 
 ``` r
 weight <- 75
