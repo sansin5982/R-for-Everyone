@@ -10,8 +10,6 @@ Sandeep Kumar Singh, PhD
     src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js">
 </script>
 
-# Introduction to R and RStudio
-
 ## Why learn R?
 
 Modern statistical, biomedical, epidemiological, public-health, and
@@ -836,8 +834,20 @@ We can inspect files in the current directory using:
 list.files()
 ```
 
-    ## [1] "01-introduction-to-r.html"  "01-introduction-to-r.md"   
-    ## [3] "01-introduction-to-r.Rmd"   "01-introduction-to-r_files"
+    ##  [1] "01-introduction-to-r.html"                      
+    ##  [2] "01-introduction-to-r.md"                        
+    ##  [3] "01-introduction-to-r.Rmd"                       
+    ##  [4] "01-introduction-to-r_files"                     
+    ##  [5] "02-objects-variables-data-types.md"             
+    ##  [6] "02-objects-variables-data-types.Rmd"            
+    ##  [7] "03-operators-expressions-logical-conditions.md" 
+    ##  [8] "03-operators-expressions-logical-conditions.Rmd"
+    ##  [9] "04-vectors-foundation-of-r.md"                  
+    ## [10] "04-vectors-foundation-of-r.Rmd"                 
+    ## [11] "05-factors-categorical-variables.md"            
+    ## [12] "05-factors-categorical-variables.Rmd"           
+    ## [13] "06-matrices.md"                                 
+    ## [14] "06-matrices.Rmd"
 
 ### `setwd()`
 

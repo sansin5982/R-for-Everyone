@@ -1,3 +1,5 @@
+Factors and Categorical Variables
+================
 Sandeep Kumar Singh, PhD
 
 <script type="text/javascript" async
@@ -7,8 +9,6 @@ Sandeep Kumar Singh, PhD
 <script type="text/javascript" async
     src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js">
 </script>
-
-# Factors and Categorical Variables
 
 In Chapter 4, we learned that vectors are one-dimensional collections of
 values. A character vector can easily store labels such as:

@@ -1,3 +1,5 @@
+Matrices
+================
 Sandeep Kumar Singh, PhD
 
 <script type="text/javascript" async
@@ -7,8 +9,6 @@ Sandeep Kumar Singh, PhD
 <script type="text/javascript" async
     src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js">
 </script>
-
-# Matrices
 
 In Chapter 4, we learned that a vector stores a one-dimensional
 collection of values. In Chapter 5, we learned how factors represent
