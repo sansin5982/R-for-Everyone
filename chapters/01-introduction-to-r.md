@@ -187,7 +187,7 @@ The main arithmetic operators are:
 
 ### Why does R print `[1]`?
 
-You may see output such as:
+We may see output such as:
 
 ``` text
 [1] 5
@@ -438,7 +438,7 @@ To remove a particular object:
 rm(bmi)
 ```
 
-To remove all objects from the current workspace, you may encounter:
+To remove all objects from the current workspace, we may encounter:
 
 ``` r
 rm(list = ls())
@@ -508,14 +508,14 @@ On macOS this is commonly:
 Command + Enter
 ```
 
-You can also highlight several lines and run them together.
+We can also highlight several lines and run them together.
 
 > **Research habit:** Use the Console for exploration. Put analysis that
 > matters into scripts.
 
 ------------------------------------------------------------------------
 
-## 1.11 Comments: explaining your code
+## 1.11 Comments: explaining our code
 
 R ignores text following `#` on a line.
 
@@ -548,7 +548,7 @@ More informative:
 mean(sbp)
 ```
 
-Good comments help future you, collaborators, reviewers, and students
+Good comments help future us, collaborators, reviewers, and students
 understand the analysis.
 
 ------------------------------------------------------------------------
@@ -586,11 +586,11 @@ round(3.1415926, 2)
 - `3.1415926` is the value being rounded;
 - `2` tells R how many decimal places to retain.
 
-Functions are central to R. Later, you will learn to write your own.
+Functions are central to R. Later, we will learn to write our own.
 
 ------------------------------------------------------------------------
 
-## 1.13 Your first collection of biomedical measurements
+## 1.13 Our first collection of biomedical measurements
 
 Suppose systolic blood pressure was recorded for five participants:
 
@@ -828,9 +828,9 @@ getwd()
 
     ## [1] "E:/Github_Classes/R for Everyone/R-for-Everyone/chapters"
 
-The result will depend on your computer and current R/RStudio setup.
+The result will depend on our computer and current R/RStudio setup.
 
-You can inspect files in the current directory using:
+We can inspect files in the current directory using:
 
 ``` r
 list.files()
@@ -849,7 +849,7 @@ setwd("path/to/folder")
 
 to change the working directory.
 
-For example, on Windows you might see a path conceptually like:
+For example, on Windows we might see a path conceptually like:
 
 ``` r
 setwd("D:/Research/R_Biostatistics")
@@ -921,7 +921,7 @@ help(mean)
 
 opens documentation for `mean()`.
 
-### Search when you do not know the exact function name
+### Search when we do not know the exact function name
 
 ``` r
 help.search("mean")
@@ -952,7 +952,7 @@ as:
 - **Value** — what the function returns;
 - **Examples** — example code.
 
-You do not need to understand every line of documentation immediately.
+We do not need to understand every line of documentation immediately.
 
 ------------------------------------------------------------------------
 
@@ -979,7 +979,7 @@ round(..., 1)
 So nested function calls are often easiest to understand from the inside
 outward.
 
-You could write the same process in two steps:
+We could write the same process in two steps:
 
 ``` r
 mean_sbp <- mean(sbp)
@@ -1000,7 +1000,7 @@ error; it is to learn how to read and diagnose them.
 
 ### Error 1: object not found
 
-Suppose you write:
+Suppose we write:
 
 ``` r
 mean(SBP)
@@ -1086,8 +1086,8 @@ accidental.
 
 ## 1.23 Reproducibility: a habit from the first chapter
 
-Suppose you calculate BMI manually in the Console and close RStudio. A
-week later, you may not remember exactly what you did.
+Suppose we calculate BMI manually in the Console and close RStudio. A
+week later, we may not remember exactly what we did.
 
 Instead, save a script:
 
@@ -1131,7 +1131,7 @@ on memory or manual clicking.
 
 ## 1.24 Guided practical: BMI calculation
 
-Create a new R script and enter the following code yourself.
+Create a new R script and enter the following code ourself.
 
 ``` r
 # Measurements
@@ -1160,7 +1160,7 @@ round(bmi, 2)
 2.  Which line creates the `bmi` object?
 3.  What happens if `height` is changed to `1.80` and the BMI line is
     rerun?
-4.  What happens if you change `height` but print `bmi` **without
+4.  What happens if we change `height` but print `bmi` **without
     rerunning the BMI calculation**?
 
 The fourth question introduces an important idea: R objects do not
@@ -1267,7 +1267,7 @@ ls()
     ## [1] "age"          "bmi"          "glucose"      "height"       "mean_glucose"
     ## [6] "mean_sbp"     "sbp"          "weight"
 
-You should begin to see that an R session consists of objects created by
+We should begin to see that an R session consists of objects created by
 executing instructions.
 
 ------------------------------------------------------------------------
@@ -1326,7 +1326,7 @@ plot(cholesterol,
 
 ------------------------------------------------------------------------
 
-## 1.27 Challenge: create your first small research script
+## 1.27 Challenge: create our first small research script
 
 Create a file called:
 
@@ -1398,7 +1398,7 @@ top to bottom.
 
 ## 1.29 Good habits to develop immediately
 
-As you continue learning R, adopt these habits from the beginning:
+As we continue learning R, adopt these habits from the beginning:
 
 1.  **Write important code in scripts.** Do not rely on Console history.
 2.  **Use descriptive object names.** `fasting_glucose` is more
@@ -1410,7 +1410,7 @@ As you continue learning R, adopt these habits from the beginning:
     to separate raw, intermediate, and processed data.
 6.  **Run scripts in logical order.** Objects must exist before later
     code uses them.
-7.  **Read error messages.** They often tell you what is wrong.
+7.  **Read error messages.** They often tell us what is wrong.
 8.  **Use the help system.** Looking up documentation is normal
     programming practice.
 9.  **Prefer reproducible instructions over manual clicking.**
@@ -1448,9 +1448,9 @@ As you continue learning R, adopt these habits from the beginning:
 
 ## 1.31 Chapter summary
 
-In this chapter, you learned the basic language of an R session.
+In this chapter, we learned the basic language of an R session.
 
-You learned that:
+We learned that:
 
 - R is the computational language and RStudio is an interface for
   working with R;
@@ -1484,16 +1484,16 @@ Saved script
 Reproducible analysis
 ```
 
-You do **not** yet need to understand data frames, factors, loops,
+We do **not** yet need to understand data frames, factors, loops,
 packages, statistical tests, or genomic file formats. Each will be
 introduced systematically when the necessary foundations are in place.
 
 ------------------------------------------------------------------------
 
-## 1.32 Check your understanding
+## 1.32 Check our understanding
 
-Answer these questions without running R first. Then use R to verify
-your answers.
+Answer these questions without running R first. Then use R to verify our
+answers.
 
 1.  What is the difference between R and RStudio?
 2.  What does `<-` do?
@@ -1503,13 +1503,13 @@ your answers.
 6.  What is the difference between typing code in the Console and saving
     it in a script?
 7.  What does `#` mean in an R script?
-8.  What does `length(sbp)` tell you?
+8.  What does `length(sbp)` tell us?
 9.  Why might `mean_sbp <- mean(sbp)` be preferable to only running
     `mean(sbp)`?
 10. What does `getwd()` report?
 11. Why are relative paths generally preferable for a portable research
     project?
-12. How would you open the help page for `mean()`?
+12. How would we open the help page for `mean()`?
 13. If `weight` changes after `bmi` was calculated, does the existing
     `bmi` object automatically change?
 14. Why should research code be saved rather than reconstructed from
