@@ -10,8 +10,6 @@ Sandeep Kumar Singh, PhD
     src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js">
 </script>
 
-# Operators, Expressions, and Logical Conditions in R
-
 In the previous chapter, we learned how R stores scientific information
 in objects and how values can be numeric, integer, character, or
 logical. We also examined missing values and type conversion.

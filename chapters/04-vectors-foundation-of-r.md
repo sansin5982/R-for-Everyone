@@ -10,8 +10,6 @@ Sandeep Kumar Singh, PhD
     src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js">
 </script>
 
-# Vectors: The Foundation of R
-
 In the previous chapters, we worked mainly with individual values and
 then used short collections of values to introduce logical operations.
 We now study those collections formally.

@@ -10,8 +10,6 @@ Sandeep Kumar Singh, PhD
     src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js">
 </script>
 
-# Objects, Variables, and Basic Data Types in R
-
 In the previous chapter, we became familiar with R and RStudio, used R
 as a calculator, created simple objects, ran functions, and learned why
 scripts are important for reproducible research. We now move to one of
