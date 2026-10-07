@@ -9,5 +9,5 @@ Chapters:
   Conditions](chapters/03-operators-expressions-logical-conditions)
 - [Vectors: The Foundation of R](chapters/04-vectors-foundation-of-r)
 - [Factors and Categorical
-  Variables](chapters/05-factors-categorical-variablesr)
+  Variables](chapters/05-factors-categorical-variables)
 - [Matrices](chapters/06-matrices)

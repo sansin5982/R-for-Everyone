@@ -1,5 +1,3 @@
-Matrices
-================
 Sandeep Kumar Singh, PhD
 
 <script type="text/javascript" async

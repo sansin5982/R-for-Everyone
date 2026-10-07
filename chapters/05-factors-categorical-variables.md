@@ -1,5 +1,3 @@
-Factors and Categorical Variables
-================
 Sandeep Kumar Singh, PhD
 
 <script type="text/javascript" async
