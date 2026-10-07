@@ -8,3 +8,6 @@ Chapters:
 - [Operators, Expressions and Logical
   Conditions](chapters/03-operators-expressions-logical-conditions)
 - [Vectors: The Foundation of R](chapters/04-vectors-foundation-of-r)
+- [Factors and Categorical
+  Variables](chapters/05-factors-categorical-variablesr)
+- [Vectors: The Foundation of R](chapters/04-vectors-foundation-of-r)
