@@ -10,4 +10,4 @@ Chapters:
 - [Vectors: The Foundation of R](chapters/04-vectors-foundation-of-r)
 - [Factors and Categorical
   Variables](chapters/05-factors-categorical-variablesr)
-- [Vectors: The Foundation of R](chapters/04-vectors-foundation-of-r)
+- [Matrices](chapters/06-matrices)
