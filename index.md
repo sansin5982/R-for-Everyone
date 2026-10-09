@@ -11,3 +11,6 @@ Chapters:
 - [Factors and Categorical
   Variables](chapters/05-factors-categorical-variables)
 - [Matrices](chapters/06-matrices)
+- [Arrays and higher dimensional
+  data](chapters/07-arrays-and-higher-dimensional-data)
+- [Lists](chapters/08-lists)
