@@ -25,3 +25,5 @@ Chapters:
   Data](chapters/15-importing-and-exporting-research-data)
 - [Data Cleaning and Quality
   Control](chapters/16-data-cleaning-and-quality-control-in-r)
+- [Data Transformation and Feature
+  Engineering](chapters/17-data-transformation-and-feature-engineering-in-r)
