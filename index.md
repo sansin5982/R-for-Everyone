@@ -23,3 +23,5 @@ Chapters:
   Directories](chapters/14-working-with-files-and-directories)
 - [Importing and Exporting Research
   Data](chapters/15-importing-and-exporting-research-data)
+- [Data Cleaning and Quality
+  Control](chapters/16-data-cleaning-and-quality-control-in-r)

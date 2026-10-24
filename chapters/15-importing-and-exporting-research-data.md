@@ -1,4 +1,4 @@
-Chapter 15 — Importing and Exporting Research Data
+Importing and Exporting Research Data
 ================
 Sandeep Kumar Singh, PhD
 
@@ -105,7 +105,7 @@ stopifnot(all(dir.exists(c(raw_dir, clean_dir, export_dir))))
 chapter15_root
 ```
 
-    ## [1] "C:\\Users\\hp\\AppData\\Local\\Temp\\Rtmpe0leXF/r_book_chapter15"
+    ## [1] "C:\\Users\\hp\\AppData\\Local\\Temp\\RtmpQDbPrO/r_book_chapter15"
 
 This directory exists for the current R session and may disappear after
 the session ends. It is therefore suitable for exercises, not long-term
@@ -1415,9 +1415,9 @@ manifest
 ```
 
     ##    file_name bytes                   modified                              md5
-    ## 1 site_A.csv    32 2026-10-24 10:45:49.955063 e52c55f5271fed8d754755a41e4e4db3
-    ## 2 site_B.csv    41 2026-10-24 10:45:49.957022 843089a1745fd0c3aa295775ebaa9a6d
-    ## 3 site_C.csv    22 2026-10-24 10:45:49.958784 dcd944ca44d1e708c507b42ad2ca8f54
+    ## 1 site_A.csv    32 2026-10-24 11:11:44.413521 e52c55f5271fed8d754755a41e4e4db3
+    ## 2 site_B.csv    41 2026-10-24 11:11:44.414528 843089a1745fd0c3aa295775ebaa9a6d
+    ## 3 site_C.csv    22 2026-10-24 11:11:44.416439 dcd944ca44d1e708c507b42ad2ca8f54
 
 Export the manifest:
 

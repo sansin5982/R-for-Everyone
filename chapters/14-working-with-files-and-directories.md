@@ -1,4 +1,4 @@
-Chapter 14 — Working with Files and Directories in R
+Working with Files and Directories in R
 ================
 Sandeep Kumar Singh, PhD
 
@@ -287,7 +287,7 @@ dir.create(chapter14_root, recursive = TRUE, showWarnings = FALSE)
 chapter14_root
 ```
 
-    ## [1] "C:\\Users\\hp\\AppData\\Local\\Temp\\RtmpyEcRWJ/r_book_chapter14"
+    ## [1] "C:\\Users\\hp\\AppData\\Local\\Temp\\Rtmpyaralu/r_book_chapter14"
 
 `tempdir()` returns a temporary directory for the current R session.
 
@@ -369,10 +369,10 @@ Show full paths:
 list.files(chapter14_root, full.names = TRUE)
 ```
 
-    ## [1] "C:\\Users\\hp\\AppData\\Local\\Temp\\RtmpyEcRWJ/r_book_chapter14/data"   
-    ## [2] "C:\\Users\\hp\\AppData\\Local\\Temp\\RtmpyEcRWJ/r_book_chapter14/reports"
-    ## [3] "C:\\Users\\hp\\AppData\\Local\\Temp\\RtmpyEcRWJ/r_book_chapter14/results"
-    ## [4] "C:\\Users\\hp\\AppData\\Local\\Temp\\RtmpyEcRWJ/r_book_chapter14/scripts"
+    ## [1] "C:\\Users\\hp\\AppData\\Local\\Temp\\Rtmpyaralu/r_book_chapter14/data"   
+    ## [2] "C:\\Users\\hp\\AppData\\Local\\Temp\\Rtmpyaralu/r_book_chapter14/reports"
+    ## [3] "C:\\Users\\hp\\AppData\\Local\\Temp\\Rtmpyaralu/r_book_chapter14/results"
+    ## [4] "C:\\Users\\hp\\AppData\\Local\\Temp\\Rtmpyaralu/r_book_chapter14/scripts"
 
 ### `list.dirs()`
 
@@ -380,13 +380,13 @@ list.files(chapter14_root, full.names = TRUE)
 list.dirs(chapter14_root, recursive = TRUE)
 ```
 
-    ## [1] "C:\\Users\\hp\\AppData\\Local\\Temp\\RtmpyEcRWJ/r_book_chapter14"               
-    ## [2] "C:\\Users\\hp\\AppData\\Local\\Temp\\RtmpyEcRWJ/r_book_chapter14/data"          
-    ## [3] "C:\\Users\\hp\\AppData\\Local\\Temp\\RtmpyEcRWJ/r_book_chapter14/data/processed"
-    ## [4] "C:\\Users\\hp\\AppData\\Local\\Temp\\RtmpyEcRWJ/r_book_chapter14/data/raw"      
-    ## [5] "C:\\Users\\hp\\AppData\\Local\\Temp\\RtmpyEcRWJ/r_book_chapter14/reports"       
-    ## [6] "C:\\Users\\hp\\AppData\\Local\\Temp\\RtmpyEcRWJ/r_book_chapter14/results"       
-    ## [7] "C:\\Users\\hp\\AppData\\Local\\Temp\\RtmpyEcRWJ/r_book_chapter14/scripts"
+    ## [1] "C:\\Users\\hp\\AppData\\Local\\Temp\\Rtmpyaralu/r_book_chapter14"               
+    ## [2] "C:\\Users\\hp\\AppData\\Local\\Temp\\Rtmpyaralu/r_book_chapter14/data"          
+    ## [3] "C:\\Users\\hp\\AppData\\Local\\Temp\\Rtmpyaralu/r_book_chapter14/data/processed"
+    ## [4] "C:\\Users\\hp\\AppData\\Local\\Temp\\Rtmpyaralu/r_book_chapter14/data/raw"      
+    ## [5] "C:\\Users\\hp\\AppData\\Local\\Temp\\Rtmpyaralu/r_book_chapter14/reports"       
+    ## [6] "C:\\Users\\hp\\AppData\\Local\\Temp\\Rtmpyaralu/r_book_chapter14/results"       
+    ## [7] "C:\\Users\\hp\\AppData\\Local\\Temp\\Rtmpyaralu/r_book_chapter14/scripts"
 
 ### `file.exists()` and `dir.exists()`
 
@@ -415,9 +415,9 @@ file.info(raw_dir)[, c("isdir", "size")]
 ```
 
     ##                                                                           isdir
-    ## C:\\Users\\hp\\AppData\\Local\\Temp\\RtmpyEcRWJ/r_book_chapter14/data/raw  TRUE
+    ## C:\\Users\\hp\\AppData\\Local\\Temp\\Rtmpyaralu/r_book_chapter14/data/raw  TRUE
     ##                                                                           size
-    ## C:\\Users\\hp\\AppData\\Local\\Temp\\RtmpyEcRWJ/r_book_chapter14/data/raw    0
+    ## C:\\Users\\hp\\AppData\\Local\\Temp\\Rtmpyaralu/r_book_chapter14/data/raw    0
 
 The exact metadata depend on the filesystem.
 
@@ -1429,7 +1429,7 @@ A path may contain relative components such as `.` and `..`.
 normalizePath(raw_dir, winslash = "/", mustWork = TRUE)
 ```
 
-    ## [1] "C:/Users/hp/AppData/Local/Temp/RtmpyEcRWJ/r_book_chapter14/data/raw"
+    ## [1] "C:/Users/hp/AppData/Local/Temp/Rtmpyaralu/r_book_chapter14/data/raw"
 
 The `mustWork = TRUE` argument raises an error if the path does not
 exist.
@@ -1447,7 +1447,7 @@ normalizePath(
 )
 ```
 
-    ## [1] "C:/Users/hp/AppData/Local/Temp/RtmpyEcRWJ/r_book_chapter14/results"
+    ## [1] "C:/Users/hp/AppData/Local/Temp/Rtmpyaralu/r_book_chapter14/results"
 
 ### Why path verification matters
 
@@ -1869,7 +1869,7 @@ file.info(gwas_tsv)$size
 file.info(gwas_tsv)$mtime
 ```
 
-    ## [1] "2026-10-24 10:22:34 IST"
+    ## [1] "2026-10-24 11:11:56 IST"
 
 ### MD5 checksum
 
@@ -1879,7 +1879,7 @@ Base R provides `tools::md5sum()`:
 tools::md5sum(gwas_tsv)
 ```
 
-    ## C:\\Users\\hp\\AppData\\Local\\Temp\\RtmpyEcRWJ/r_book_chapter14/data/raw/gwas_summary.tsv 
+    ## C:\\Users\\hp\\AppData\\Local\\Temp\\Rtmpyaralu/r_book_chapter14/data/raw/gwas_summary.tsv 
     ##                                                         "20aedd687b931707f0642eb754becd5e"
 
 A checksum can help detect whether file bytes have changed. MD5 is
