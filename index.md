@@ -29,3 +29,16 @@ Chapters:
   Engineering](chapters/17-data-transformation-and-feature-engineering-in-r)
 - [Working with Character
   Strings](chapters/18-working-with-character-strings-in-r)
+- [Regular Expressions](chapters/19-regular-expressions-in-r)
+- [Working with Dates and
+  Times](chapters/20-working-with-dates-and-times-in-r)
+- [Advanced Functions and Functional
+  Programming](chapters/21-advanced-functions-and-functional-programming-in-r)
+- [Introduction to Tidyverse and
+  Tibbles](chapters/22-introduction-to-tidyverse-and-tibbles)
+- [Data Manipulation with Dplyr part
+  I](chapters/23-data-manipulation-with-dplyr-part-i)
+- [Data Manipulation with Dplyr part
+  II](chapters/24-data-manipulation-with-dplyr-part-ii)
+- [Joining and Combining
+  Datasets](chapters/25-joining-and-combining-datasets)
