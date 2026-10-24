@@ -19,3 +19,5 @@ Chapters:
 - [Loops](chapters/11-loops-for-while-repeat)
 - [Functions](chapters/12-functions-reusable-research-code)
 - [Apply Family](chapters/13-apply-family)
+- [Working with Files and
+  Directories](chapters/14-working-with-files-and-directories)
