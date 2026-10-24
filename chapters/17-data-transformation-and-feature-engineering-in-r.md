@@ -1,4 +1,4 @@
-Data Transformation and Feature Engineering in R
+Data Transformation and Feature Engineering
 ================
 Sandeep Kumar Singh, PhD
 
