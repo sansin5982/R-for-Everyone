@@ -21,3 +21,5 @@ Chapters:
 - [Apply Family](chapters/13-apply-family)
 - [Working with Files and
   Directories](chapters/14-working-with-files-and-directories)
+- [Importing and Exporting Research
+  Data](chapters/15-importing-and-exporting-research-data)
