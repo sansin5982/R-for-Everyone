@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" font-family="Arial, Helvetica, sans-serif">
+<rect width="720" height="300" fill="#ffffff"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M1 1L9 5L1 9z" fill="#444441"/></marker></defs>
+<text x="360" y="32" text-anchor="middle" font-size="16" fill="#2C2C2A">sv_deaths &lt;- 1263   means: "put 1263 into a box labelled sv_deaths"</text>
+<rect x="40" y="110" width="150" height="80" rx="8" fill="#E1F5EE" stroke="#0F6E56"/>
+<text x="115" y="145" text-anchor="middle" font-size="14" fill="#085041">The value</text>
+<text x="115" y="172" text-anchor="middle" font-size="22" font-weight="bold" font-family="Courier New, monospace" fill="#04342C">1263</text>
+<line x1="198" y1="150" x2="300" y2="150" stroke="#444441" stroke-width="2" marker-end="url(#a)"/>
+<text x="249" y="138" text-anchor="middle" font-size="20" font-weight="bold" font-family="Courier New, monospace" fill="#2C2C2A">&lt;-</text>
+<text x="249" y="178" text-anchor="middle" font-size="12" fill="#5F5E5A">"gets"</text>
+<rect x="310" y="80" width="190" height="150" rx="10" fill="#FAEEDA" stroke="#854F0B" stroke-width="2"/>
+<rect x="335" y="64" width="140" height="32" rx="6" fill="#ffffff" stroke="#854F0B"/>
+<text x="405" y="86" text-anchor="middle" font-size="15" font-weight="bold" font-family="Courier New, monospace" fill="#633806">sv_deaths</text>
+<text x="405" y="165" text-anchor="middle" font-size="30" font-weight="bold" font-family="Courier New, monospace" fill="#412402">1263</text>
+<text x="405" y="210" text-anchor="middle" font-size="12" fill="#854F0B">an object in the Environment</text>
+<text x="525" y="120" font-size="13" fill="#2C2C2A">Label = object name</text>
+<text x="525" y="145" font-size="13" fill="#2C2C2A">Contents = value</text>
+<text x="525" y="170" font-size="13" fill="#2C2C2A">Type the label to</text>
+<text x="525" y="188" font-size="13" fill="#2C2C2A">see the contents</text>
+<text x="360" y="270" text-anchor="middle" font-size="13" fill="#5F5E5A">Real data: Southwark and Vauxhall Company houses, 1,263 cholera deaths in 7 weeks of 1854 (Snow, 1855)</text>
+</svg>

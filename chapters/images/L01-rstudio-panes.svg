@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" font-family="Arial, Helvetica, sans-serif">
+<rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<rect x="10" y="10" width="700" height="440" rx="10" fill="#F1EFE8" stroke="#888780"/>
+<text x="360" y="34" text-anchor="middle" font-size="15" fill="#2C2C2A">RStudio window (default layout)</text>
+<rect x="25" y="48" width="330" height="190" rx="8" fill="#EEEDFE" stroke="#534AB7"/>
+<text x="190" y="80" text-anchor="middle" font-size="17" font-weight="bold" fill="#3C3489">1. Source pane</text>
+<text x="190" y="108" text-anchor="middle" font-size="13" fill="#3C3489">Where we WRITE and SAVE scripts (.R)</text>
+<text x="190" y="130" text-anchor="middle" font-size="13" fill="#3C3489">Like a notebook: permanent record</text>
+<text x="190" y="165" text-anchor="middle" font-size="13" font-family="Courier New, monospace" fill="#26215C">sv_deaths &lt;- 1263</text>
+<text x="190" y="185" text-anchor="middle" font-size="13" font-family="Courier New, monospace" fill="#26215C">sv_houses &lt;- 40046</text>
+<text x="190" y="220" text-anchor="middle" font-size="12" fill="#534AB7">Run a line: Ctrl + Enter (Mac: Cmd + Return)</text>
+<rect x="25" y="248" width="330" height="190" rx="8" fill="#E1F5EE" stroke="#0F6E56"/>
+<text x="190" y="280" text-anchor="middle" font-size="17" font-weight="bold" fill="#085041">2. Console pane</text>
+<text x="190" y="308" text-anchor="middle" font-size="13" fill="#085041">Where R RUNS code and replies</text>
+<text x="190" y="330" text-anchor="middle" font-size="13" fill="#085041">Like a phone call: nothing is saved</text>
+<text x="190" y="368" text-anchor="middle" font-size="13" font-family="Courier New, monospace" fill="#04342C">&gt; 1263 / 40046 * 10000</text>
+<text x="190" y="388" text-anchor="middle" font-size="13" font-family="Courier New, monospace" fill="#04342C">[1] 315.3873</text>
+<rect x="365" y="48" width="330" height="190" rx="8" fill="#FAEEDA" stroke="#854F0B"/>
+<text x="530" y="80" text-anchor="middle" font-size="17" font-weight="bold" fill="#633806">3. Environment pane</text>
+<text x="530" y="108" text-anchor="middle" font-size="13" fill="#633806">Lists every OBJECT R is holding now</text>
+<text x="530" y="130" text-anchor="middle" font-size="13" fill="#633806">Like a shelf of labelled jars</text>
+<text x="530" y="165" text-anchor="middle" font-size="13" font-family="Courier New, monospace" fill="#412402">sv_deaths   1263</text>
+<text x="530" y="185" text-anchor="middle" font-size="13" font-family="Courier New, monospace" fill="#412402">sv_houses   40046</text>
+<text x="530" y="220" text-anchor="middle" font-size="12" fill="#854F0B">Tabs: Environment, History</text>
+<rect x="365" y="248" width="330" height="190" rx="8" fill="#FAECE7" stroke="#993C1D"/>
+<text x="530" y="280" text-anchor="middle" font-size="17" font-weight="bold" fill="#712B13">4. Files / Plots / Help pane</text>
+<text x="530" y="308" text-anchor="middle" font-size="13" fill="#712B13">Folders, figures, packages, manuals</text>
+<text x="530" y="330" text-anchor="middle" font-size="13" fill="#712B13">Like a desk drawer and reference shelf</text>
+<text x="530" y="368" text-anchor="middle" font-size="12" fill="#993C1D">Tabs: Files, Plots, Packages,</text>
+<text x="530" y="386" text-anchor="middle" font-size="12" fill="#993C1D">Help, Viewer</text>
+</svg>
