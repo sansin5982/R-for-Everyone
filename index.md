@@ -9,6 +9,12 @@ Chapters:
   Comments](chapters/L03-objects-scripts-and-comments)
 - [Functions Arguments and
   Help](chapters/L04-functions-arguments-and-help)
+- [Data Types](chapters/L06-data-types)
+- [Creating Vectors](chapters/L07-creating-vectors)
+- [Indexing and Logical
+  Filtering](chapters/L08-indexing-and-logical-filtering)
+- [Missing Values](chapters/L09-missing-values)
+- [Everyday Vector Functions](chapters/L10-everyday-vector-functions)
 - [Introduction to R](chapters/01-introduction-to-r)
 - [Packages and built-in
   Datasets](chapters/L05-packages-and-built-in-datasets)

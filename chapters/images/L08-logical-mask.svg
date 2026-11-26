@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 330" font-family="Arial, Helvetica, sans-serif">
+<rect width="720" height="330" fill="#ffffff"/>
+<text x="360" y="28" text-anchor="middle" font-size="16" fill="#2C2C2A">bw[bw &lt; 2500]: ask a yes/no question, then keep only the "yes" values</text>
+<text x="20" y="80" font-size="13" font-family="Courier New, monospace" fill="#2C2C2A">bw</text>
+<text x="20" y="150" font-size="13" font-family="Courier New, monospace" fill="#2C2C2A">bw &lt; 2500</text>
+<text x="20" y="240" font-size="13" font-family="Courier New, monospace" fill="#2C2C2A">bw[bw &lt; 2500]</text>
+<g font-family="Courier New, monospace" font-size="14">
+<rect x="130" y="58" width="66" height="36" rx="5" fill="#F1EFE8" stroke="#888780"/><text x="163" y="81" text-anchor="middle" fill="#2C2C2A">4174</text>
+<rect x="202" y="58" width="66" height="36" rx="5" fill="#F1EFE8" stroke="#888780"/><text x="235" y="81" text-anchor="middle" fill="#2C2C2A">4238</text>
+<rect x="274" y="58" width="66" height="36" rx="5" fill="#F1EFE8" stroke="#888780"/><text x="307" y="81" text-anchor="middle" fill="#2C2C2A">4593</text>
+<rect x="346" y="58" width="66" height="36" rx="5" fill="#F1EFE8" stroke="#888780"/><text x="379" y="81" text-anchor="middle" fill="#2C2C2A">4990</text>
+<rect x="418" y="58" width="66" height="36" rx="5" fill="#FAECE7" stroke="#993C1D"/><text x="451" y="81" text-anchor="middle" fill="#4A1B0C">709</text>
+<rect x="490" y="58" width="66" height="36" rx="5" fill="#FAECE7" stroke="#993C1D"/><text x="523" y="81" text-anchor="middle" fill="#4A1B0C">1021</text>
+<rect x="562" y="58" width="66" height="36" rx="5" fill="#FAECE7" stroke="#993C1D"/><text x="595" y="81" text-anchor="middle" fill="#4A1B0C">1135</text>
+<rect x="634" y="58" width="66" height="36" rx="5" fill="#FAECE7" stroke="#993C1D"/><text x="667" y="81" text-anchor="middle" fill="#4A1B0C">1330</text>
+<text x="163" y="152" text-anchor="middle" fill="#5F5E5A">FALSE</text><text x="235" y="152" text-anchor="middle" fill="#5F5E5A">FALSE</text>
+<text x="307" y="152" text-anchor="middle" fill="#5F5E5A">FALSE</text><text x="379" y="152" text-anchor="middle" fill="#5F5E5A">FALSE</text>
+<text x="451" y="152" text-anchor="middle" font-weight="bold" fill="#993C1D">TRUE</text><text x="523" y="152" text-anchor="middle" font-weight="bold" fill="#993C1D">TRUE</text>
+<text x="595" y="152" text-anchor="middle" font-weight="bold" fill="#993C1D">TRUE</text><text x="667" y="152" text-anchor="middle" font-weight="bold" fill="#993C1D">TRUE</text>
+<rect x="418" y="218" width="66" height="36" rx="5" fill="#FAECE7" stroke="#993C1D"/><text x="451" y="241" text-anchor="middle" fill="#4A1B0C">709</text>
+<rect x="490" y="218" width="66" height="36" rx="5" fill="#FAECE7" stroke="#993C1D"/><text x="523" y="241" text-anchor="middle" fill="#4A1B0C">1021</text>
+<rect x="562" y="218" width="66" height="36" rx="5" fill="#FAECE7" stroke="#993C1D"/><text x="595" y="241" text-anchor="middle" fill="#4A1B0C">1135</text>
+<rect x="634" y="218" width="66" height="36" rx="5" fill="#FAECE7" stroke="#993C1D"/><text x="667" y="241" text-anchor="middle" fill="#4A1B0C">1330</text>
+</g>
+<line x1="451" y1="165" x2="451" y2="212" stroke="#993C1D" stroke-width="1.5" stroke-dasharray="4 3"/>
+<line x1="523" y1="165" x2="523" y2="212" stroke="#993C1D" stroke-width="1.5" stroke-dasharray="4 3"/>
+<line x1="595" y1="165" x2="595" y2="212" stroke="#993C1D" stroke-width="1.5" stroke-dasharray="4 3"/>
+<line x1="667" y1="165" x2="667" y2="212" stroke="#993C1D" stroke-width="1.5" stroke-dasharray="4 3"/>
+<text x="290" y="241" text-anchor="middle" font-size="13" fill="#5F5E5A">FALSE positions are dropped</text>
+<text x="360" y="300" text-anchor="middle" font-size="13" fill="#5F5E5A">Real values: babies 127 to 134 of birthwt (birth weight in grams, Baystate Medical Center, 1986)</text>
+</svg>

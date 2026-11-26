@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" font-family="Arial, Helvetica, sans-serif">
+<rect width="720" height="300" fill="#ffffff"/>
+<text x="360" y="30" text-anchor="middle" font-size="16" fill="#2C2C2A">deaths / houses * 10000 works on every position at once</text>
+<text x="85" y="70" text-anchor="middle" font-size="14" font-weight="bold" fill="#3C3489">deaths</text>
+<text x="300" y="70" text-anchor="middle" font-size="14" font-weight="bold" fill="#085041">houses</text>
+<text x="590" y="70" text-anchor="middle" font-size="14" font-weight="bold" fill="#633806">rate per 10,000</text>
+<g font-family="Courier New, monospace" font-size="16">
+<rect x="30" y="85" width="110" height="44" rx="6" fill="#EEEDFE" stroke="#534AB7"/><text x="85" y="113" text-anchor="middle" fill="#26215C">1263</text>
+<rect x="30" y="139" width="110" height="44" rx="6" fill="#EEEDFE" stroke="#534AB7"/><text x="85" y="167" text-anchor="middle" fill="#26215C">98</text>
+<rect x="30" y="193" width="110" height="44" rx="6" fill="#EEEDFE" stroke="#534AB7"/><text x="85" y="221" text-anchor="middle" fill="#26215C">1422</text>
+<rect x="240" y="85" width="120" height="44" rx="6" fill="#E1F5EE" stroke="#0F6E56"/><text x="300" y="113" text-anchor="middle" fill="#04342C">40046</text>
+<rect x="240" y="139" width="120" height="44" rx="6" fill="#E1F5EE" stroke="#0F6E56"/><text x="300" y="167" text-anchor="middle" fill="#04342C">26107</text>
+<rect x="240" y="193" width="120" height="44" rx="6" fill="#E1F5EE" stroke="#0F6E56"/><text x="300" y="221" text-anchor="middle" fill="#04342C">256423</text>
+<rect x="530" y="85" width="120" height="44" rx="6" fill="#FAEEDA" stroke="#854F0B"/><text x="590" y="113" text-anchor="middle" fill="#412402">315.4</text>
+<rect x="530" y="139" width="120" height="44" rx="6" fill="#FAEEDA" stroke="#854F0B"/><text x="590" y="167" text-anchor="middle" fill="#412402">37.5</text>
+<rect x="530" y="193" width="120" height="44" rx="6" fill="#FAEEDA" stroke="#854F0B"/><text x="590" y="221" text-anchor="middle" fill="#412402">55.5</text>
+<text x="190" y="113" text-anchor="middle" fill="#2C2C2A">/</text><text x="190" y="167" text-anchor="middle" fill="#2C2C2A">/</text><text x="190" y="221" text-anchor="middle" fill="#2C2C2A">/</text>
+<text x="445" y="113" text-anchor="middle" fill="#2C2C2A">x 10000 =</text><text x="445" y="167" text-anchor="middle" fill="#2C2C2A">x 10000 =</text><text x="445" y="221" text-anchor="middle" fill="#2C2C2A">x 10000 =</text>
+</g>
+<text x="680" y="113" font-size="12" fill="#5F5E5A" text-anchor="end"> </text>
+<text x="360" y="272" text-anchor="middle" font-size="13" fill="#5F5E5A">Position 1 is Southwark and Vauxhall, 2 is Lambeth, 3 is rest of London (Snow, 1855)</text>
+</svg>
