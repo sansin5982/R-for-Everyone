@@ -2,6 +2,9 @@
 
 Chapters:
 
+- [Getting started with R and
+  Rstudio](chapters/L01-getting-started-with-r-and-rstudio)
+- [R as a Calculator](chapters/L02-r-as-a-calculator)
 - [Introduction to R](chapters/01-introduction-to-r)
 - [Objects, Variable and Data
   Types](chapters/02-objects-variables-data-types)
