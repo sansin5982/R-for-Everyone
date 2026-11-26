@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 330" font-family="Arial, Helvetica, sans-serif">
+<rect width="720" height="330" fill="#ffffff"/>
+<text x="360" y="30" text-anchor="middle" font-size="16" fill="#2C2C2A">A list is a train: each carriage can carry a different kind of cargo</text>
+<g>
+<rect x="30" y="60" width="150" height="110" rx="8" fill="#EEEDFE" stroke="#534AB7"/><text x="105" y="84" text-anchor="middle" font-size="13" font-weight="bold" fill="#3C3489">$study</text>
+<text x="105" y="118" text-anchor="middle" font-size="12" font-family="Courier New, monospace" fill="#26215C">"Baystate low</text><text x="105" y="134" text-anchor="middle" font-size="12" font-family="Courier New, monospace" fill="#26215C">birth weight"</text>
+<text x="105" y="160" text-anchor="middle" font-size="11" fill="#534AB7">character</text>
+<rect x="200" y="60" width="150" height="110" rx="8" fill="#E1F5EE" stroke="#0F6E56"/><text x="275" y="84" text-anchor="middle" font-size="13" font-weight="bold" fill="#085041">$year</text>
+<text x="275" y="125" text-anchor="middle" font-size="16" font-family="Courier New, monospace" fill="#04342C">1986</text>
+<text x="275" y="160" text-anchor="middle" font-size="11" fill="#0F6E56">numeric</text>
+<rect x="370" y="60" width="150" height="110" rx="8" fill="#FAEEDA" stroke="#854F0B"/><text x="445" y="84" text-anchor="middle" font-size="13" font-weight="bold" fill="#633806">$bwt</text>
+<text x="445" y="118" text-anchor="middle" font-size="12" font-family="Courier New, monospace" fill="#412402">2523 2551 2557</text><text x="445" y="134" text-anchor="middle" font-size="12" font-family="Courier New, monospace" fill="#412402">... (189 values)</text>
+<text x="445" y="160" text-anchor="middle" font-size="11" fill="#854F0B">integer vector</text>
+<rect x="540" y="60" width="150" height="110" rx="8" fill="#FAECE7" stroke="#993C1D"/><text x="615" y="84" text-anchor="middle" font-size="13" font-weight="bold" fill="#712B13">$smoking</text>
+<text x="615" y="118" text-anchor="middle" font-size="12" font-family="Courier New, monospace" fill="#4A1B0C">Non-smoker Smoker</text><text x="615" y="134" text-anchor="middle" font-size="12" font-family="Courier New, monospace" fill="#4A1B0C">115 74</text>
+<text x="615" y="160" text-anchor="middle" font-size="11" fill="#993C1D">table</text>
+<circle cx="70" cy="180" r="8" fill="#888780"/><circle cx="140" cy="180" r="8" fill="#888780"/>
+<circle cx="240" cy="180" r="8" fill="#888780"/><circle cx="310" cy="180" r="8" fill="#888780"/>
+<circle cx="410" cy="180" r="8" fill="#888780"/><circle cx="480" cy="180" r="8" fill="#888780"/>
+<circle cx="580" cy="180" r="8" fill="#888780"/><circle cx="650" cy="180" r="8" fill="#888780"/>
+<line x1="180" y1="115" x2="200" y2="115" stroke="#444441" stroke-width="3"/><line x1="350" y1="115" x2="370" y2="115" stroke="#444441" stroke-width="3"/><line x1="520" y1="115" x2="540" y2="115" stroke="#444441" stroke-width="3"/>
+</g>
+<rect x="60" y="220" width="280" height="80" rx="8" fill="#F1EFE8" stroke="#888780"/>
+<text x="200" y="248" text-anchor="middle" font-size="15" font-family="Courier New, monospace" fill="#2C2C2A">info["year"]</text>
+<text x="200" y="272" text-anchor="middle" font-size="12" fill="#444441">single [ ]: a smaller TRAIN</text>
+<text x="200" y="290" text-anchor="middle" font-size="12" fill="#444441">(still a list, with one carriage)</text>
+<rect x="380" y="220" width="280" height="80" rx="8" fill="#E1F5EE" stroke="#0F6E56"/>
+<text x="520" y="248" text-anchor="middle" font-size="15" font-family="Courier New, monospace" fill="#04342C">info[["year"]]  or  info$year</text>
+<text x="520" y="272" text-anchor="middle" font-size="12" fill="#085041">double [[ ]] or $: the CARGO itself</text>
+<text x="520" y="290" text-anchor="middle" font-size="12" fill="#085041">(the number 1986)</text>
+</svg>

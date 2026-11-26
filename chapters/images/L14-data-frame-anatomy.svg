@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" font-family="Arial, Helvetica, sans-serif">
+<rect width="720" height="360" fill="#ffffff"/>
+<text x="360" y="28" text-anchor="middle" font-size="16" fill="#2C2C2A">A data frame: each ROW is one baby, each COLUMN is one variable (a vector)</text>
+<g font-size="13" font-family="Courier New, monospace">
+<rect x="130" y="50" width="90" height="34" fill="#E1F5EE" stroke="#0F6E56"/><text x="175" y="72" text-anchor="middle" font-weight="bold" fill="#085041">low</text>
+<rect x="220" y="50" width="90" height="34" fill="#E1F5EE" stroke="#0F6E56"/><text x="265" y="72" text-anchor="middle" font-weight="bold" fill="#085041">age</text>
+<rect x="310" y="50" width="90" height="34" fill="#E1F5EE" stroke="#0F6E56"/><text x="355" y="72" text-anchor="middle" font-weight="bold" fill="#085041">lwt</text>
+<rect x="400" y="50" width="90" height="34" fill="#E1F5EE" stroke="#0F6E56"/><text x="445" y="72" text-anchor="middle" font-weight="bold" fill="#085041">smoke</text>
+<rect x="490" y="50" width="60" height="34" fill="#E1F5EE" stroke="#0F6E56"/><text x="520" y="72" text-anchor="middle" font-weight="bold" fill="#085041">...</text>
+<rect x="550" y="50" width="110" height="34" fill="#FAEEDA" stroke="#854F0B" stroke-width="2"/><text x="605" y="72" text-anchor="middle" font-weight="bold" fill="#633806">bwt</text>
+<rect x="60" y="84" width="70" height="34" fill="#EEEDFE" stroke="#534AB7"/><text x="95" y="106" text-anchor="middle" fill="#3C3489">85</text>
+<rect x="60" y="118" width="70" height="34" fill="#EEEDFE" stroke="#534AB7"/><text x="95" y="140" text-anchor="middle" fill="#3C3489">86</text>
+<rect x="60" y="152" width="70" height="34" fill="#EEEDFE" stroke="#534AB7"/><text x="95" y="174" text-anchor="middle" fill="#3C3489">87</text>
+<rect x="60" y="186" width="70" height="34" fill="#EEEDFE" stroke="#534AB7"/><text x="95" y="208" text-anchor="middle" fill="#3C3489">...</text>
+<rect x="130" y="84" width="420" height="34" fill="#ffffff" stroke="#888780"/>
+<text x="175" y="106" text-anchor="middle" fill="#2C2C2A">0</text><text x="265" y="106" text-anchor="middle" fill="#2C2C2A">19</text><text x="355" y="106" text-anchor="middle" fill="#2C2C2A">182</text><text x="445" y="106" text-anchor="middle" fill="#2C2C2A">0</text>
+<rect x="550" y="84" width="110" height="34" fill="#FAEEDA" stroke="#854F0B"/><text x="605" y="106" text-anchor="middle" fill="#412402">2523</text>
+<rect x="130" y="118" width="420" height="34" fill="#F1EFE8" stroke="#534AB7" stroke-width="2"/>
+<text x="175" y="140" text-anchor="middle" fill="#2C2C2A">0</text><text x="265" y="140" text-anchor="middle" fill="#2C2C2A">33</text><text x="355" y="140" text-anchor="middle" fill="#2C2C2A">155</text><text x="445" y="140" text-anchor="middle" fill="#2C2C2A">0</text>
+<rect x="550" y="118" width="110" height="34" fill="#FAEEDA" stroke="#854F0B"/><text x="605" y="140" text-anchor="middle" fill="#412402">2551</text>
+<rect x="130" y="152" width="420" height="34" fill="#ffffff" stroke="#888780"/>
+<text x="175" y="174" text-anchor="middle" fill="#2C2C2A">0</text><text x="265" y="174" text-anchor="middle" fill="#2C2C2A">20</text><text x="355" y="174" text-anchor="middle" fill="#2C2C2A">105</text><text x="445" y="174" text-anchor="middle" fill="#2C2C2A">1</text>
+<rect x="550" y="152" width="110" height="34" fill="#FAEEDA" stroke="#854F0B"/><text x="605" y="174" text-anchor="middle" fill="#412402">2557</text>
+<rect x="130" y="186" width="530" height="34" fill="#ffffff" stroke="#888780"/><text x="395" y="208" text-anchor="middle" fill="#5F5E5A">... 189 rows in total ...</text>
+</g>
+<text x="95" y="242" text-anchor="middle" font-size="11" fill="#534AB7">row names</text>
+<text x="40" y="275" font-size="14" fill="#2C2C2A">Three ways to point at data, always [ rows , columns ]:</text>
+<text x="40" y="302" font-size="14" font-family="Courier New, monospace" fill="#633806">birthwt$bwt</text><text x="250" y="302" font-size="13" fill="#444441">one whole column (orange), as a vector</text>
+<text x="40" y="326" font-size="14" font-family="Courier New, monospace" fill="#3C3489">birthwt[2, ]</text><text x="250" y="326" font-size="13" fill="#444441">one whole row (outlined): baby 2, all variables</text>
+<text x="40" y="350" font-size="14" font-family="Courier New, monospace" fill="#2C2C2A">birthwt[2, "bwt"]</text><text x="250" y="350" font-size="13" fill="#444441">one cell: baby 2's birth weight (2551)</text>
+</svg>

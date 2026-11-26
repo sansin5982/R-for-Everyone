@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 320" font-family="Arial, Helvetica, sans-serif">
+<rect width="720" height="320" fill="#ffffff"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M1 1L9 5L1 9z" fill="#444441"/></marker></defs>
+<text x="360" y="30" text-anchor="middle" font-size="16" fill="#2C2C2A">A factor = codes stored once + a lookup card of labels (the levels)</text>
+<text x="110" y="68" text-anchor="middle" font-size="14" font-weight="bold" fill="#2C2C2A">birthwt$smoke (codes)</text>
+<g font-family="Courier New, monospace" font-size="16">
+<rect x="60" y="82" width="100" height="34" rx="5" fill="#F1EFE8" stroke="#888780"/><text x="110" y="105" text-anchor="middle" fill="#2C2C2A">0</text>
+<rect x="60" y="122" width="100" height="34" rx="5" fill="#F1EFE8" stroke="#888780"/><text x="110" y="145" text-anchor="middle" fill="#2C2C2A">0</text>
+<rect x="60" y="162" width="100" height="34" rx="5" fill="#F1EFE8" stroke="#888780"/><text x="110" y="185" text-anchor="middle" fill="#2C2C2A">1</text>
+<rect x="60" y="202" width="100" height="34" rx="5" fill="#F1EFE8" stroke="#888780"/><text x="110" y="225" text-anchor="middle" fill="#2C2C2A">1</text>
+</g>
+<line x1="170" y1="160" x2="245" y2="160" stroke="#444441" stroke-width="2" marker-end="url(#a)"/>
+<rect x="255" y="85" width="210" height="150" rx="10" fill="#EEEDFE" stroke="#534AB7" stroke-width="2"/>
+<text x="360" y="112" text-anchor="middle" font-size="14" font-weight="bold" fill="#3C3489">Lookup card (levels)</text>
+<text x="360" y="155" text-anchor="middle" font-size="15" font-family="Courier New, monospace" fill="#26215C">0  =  "Non-smoker"</text>
+<text x="360" y="190" text-anchor="middle" font-size="15" font-family="Courier New, monospace" fill="#26215C">1  =  "Smoker"</text>
+<text x="360" y="222" text-anchor="middle" font-size="12" fill="#534AB7">first level = reference group</text>
+<line x1="475" y1="160" x2="535" y2="160" stroke="#444441" stroke-width="2" marker-end="url(#a)"/>
+<text x="620" y="68" text-anchor="middle" font-size="14" font-weight="bold" fill="#2C2C2A">smoke_f (what we see)</text>
+<g font-family="Courier New, monospace" font-size="15">
+<rect x="545" y="82" width="150" height="34" rx="5" fill="#E1F5EE" stroke="#0F6E56"/><text x="620" y="105" text-anchor="middle" fill="#04342C">Non-smoker</text>
+<rect x="545" y="122" width="150" height="34" rx="5" fill="#E1F5EE" stroke="#0F6E56"/><text x="620" y="145" text-anchor="middle" fill="#04342C">Non-smoker</text>
+<rect x="545" y="162" width="150" height="34" rx="5" fill="#FAECE7" stroke="#993C1D"/><text x="620" y="185" text-anchor="middle" fill="#4A1B0C">Smoker</text>
+<rect x="545" y="202" width="150" height="34" rx="5" fill="#FAECE7" stroke="#993C1D"/><text x="620" y="225" text-anchor="middle" fill="#4A1B0C">Smoker</text>
+</g>
+<text x="360" y="280" text-anchor="middle" font-size="14" font-family="Courier New, monospace" fill="#2C2C2A">factor(birthwt$smoke, levels = c(0, 1), labels = c("Non-smoker", "Smoker"))</text>
+<text x="360" y="304" text-anchor="middle" font-size="12" fill="#5F5E5A">The codes and their meaning come from the help page ?birthwt</text>
+</svg>
