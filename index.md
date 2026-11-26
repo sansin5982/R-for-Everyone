@@ -5,7 +5,13 @@ Chapters:
 - [Getting started with R and
   Rstudio](chapters/L01-getting-started-with-r-and-rstudio)
 - [R as a Calculator](chapters/L02-r-as-a-calculator)
+- [Objects Scripts and
+  Comments](chapters/L03-objects-scripts-and-comments)
+- [Functions Arguments and
+  Help](chapters/L04-functions-arguments-and-help)
 - [Introduction to R](chapters/01-introduction-to-r)
+- [Packages and built-in
+  Datasets](chapters/L05-packages-and-built-in-datasets)
 - [Objects, Variable and Data
   Types](chapters/02-objects-variables-data-types)
 - [Operators, Expressions and Logical
