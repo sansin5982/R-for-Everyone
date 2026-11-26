@@ -22,6 +22,10 @@ Chapters:
 - [Lists](chapters/L13-lists)
 - [Data Frames Exploring](chapters/L14-data-frames-exploring)
 - [Data Frames Changing](chapters/L15-data-frames-changing)
+- [Base R Plots](chapters/L16-base-r-plots)
+- [Projects Paths and Files](chapters/L17-projects-paths-and-files)
+- [Capstone low birth-weight fact
+  sheet](chapters/L18-capstone-low-birth-weight-fact-sheet)
 - [Conditional Programming](chapters/10-ifelse)
 - [Loops](chapters/11-loops-for-while-repeat)
 - [Functions](chapters/12-functions-reusable-research-code)
