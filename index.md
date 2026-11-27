@@ -28,9 +28,9 @@ Chapters:
   sheet](chapters/L18-capstone-low-birth-weight-fact-sheet)
 - [Making Decisions with
   Conditions](chapters/L19-making-decisions-with-conditions)
-- [Loops](L20-loops)
-- [Writing Your Own Functions](L21-writing-your-own-functions)
-- [The apply family](L22-the-apply-family)
+- [Loops](chapters/L20-loops)
+- [Writing Your Own Functions](chapters/L21-writing-your-own-functions)
+- [The apply family](chapters/L22-the-apply-family)
 - [Working with Files and
   Directories](chapters/14-working-with-files-and-directories)
 - [Importing and Exporting Research
