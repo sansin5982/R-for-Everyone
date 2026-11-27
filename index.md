@@ -26,10 +26,11 @@ Chapters:
 - [Projects Paths and Files](chapters/L17-projects-paths-and-files)
 - [Capstone low birth-weight fact
   sheet](chapters/L18-capstone-low-birth-weight-fact-sheet)
-- [Conditional Programming](chapters/10-ifelse)
-- [Loops](chapters/11-loops-for-while-repeat)
-- [Functions](chapters/12-functions-reusable-research-code)
-- [Apply Family](chapters/13-apply-family)
+- [Making Decisions with
+  Conditions](chapters/L19-making-decisions-with-conditions)
+- [Loops](L20-loops)
+- [Writing Your Own Functions](L21-writing-your-own-functions)
+- [The apply family](L22-the-apply-family)
 - [Working with Files and
   Directories](chapters/14-working-with-files-and-directories)
 - [Importing and Exporting Research

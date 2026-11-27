@@ -1,0 +1,466 @@
+Lesson 22: The Apply Family, Loops Made Short
+================
+Dr. Sandeep Kumar Singh
+
+> **The real question for today:** In the Pima study, do women with
+> diabetes have a higher average BMI than women without? In the Baystate
+> study, how does mean birth weight differ between mothers who smoked
+> and those who did not, and does that pattern look the same across the
+> mother’s race groups? Each question means “take a function, run it on
+> every column, or on every group”. We could write loops. R has shorter,
+> clearer tools for exactly this.
+
+------------------------------------------------------------------------
+
+## 1. Why this lesson matters
+
+In Lesson 20 a loop needed six lines (prepare a container, count rounds,
+pick a column, calculate, store, collect). In Lesson 21 we put the
+calculation into a function. The **apply family** takes the final step:
+*you name the function and the thing to run it on, R does the looping
+and the collecting.* The result is shorter code with fewer places for
+mistakes, and code that reads like a sentence.
+
+------------------------------------------------------------------------
+
+## 2. The ideas, in plain words
+
+### 2.1 One idea, several tools
+
+Imagine a lab technician who has a stack of 7 blood-sample racks and a
+machine that measures one thing. She feeds the rack into the machine and
+collects a printout for each. The apply family is that routine. The
+tools differ only in **what is fed in** and **how the printouts come
+back**.
+
+| Tool | What it loops over | What comes back |
+|----|----|----|
+| `sapply(x, f)` | each element of a vector, or each **column** of a data frame | the simplest shape: a vector or a matrix |
+| `lapply(x, f)` | the same | always a **list** |
+| `vapply(x, f, type)` | the same | like `sapply` but you promise the type, so errors are caught early |
+| `apply(m, 1 or 2, f)` | each **row** (1) or **column** (2) of a matrix | a vector or matrix |
+| `tapply(values, groups, f)` | values split by a **grouping** variable | one answer per group |
+| `split(x, groups)` | cuts `x` into pieces by group | a list of pieces |
+| `aggregate(y ~ g, data, f)` | a column, grouped, from a data frame | a small data frame |
+
+The letter **s** in `sapply` stands for *simplify*: it tries to tidy the
+list that `lapply` produces into a vector or matrix.
+
+### 2.2 Passing extra arguments
+
+In `sapply(pima$glu, mean, na.rm = TRUE)`, anything written after the
+function name (`na.rm = TRUE`) is handed on to that function every time
+it runs. This is how we say “ignore missing values” to all rounds at
+once.
+
+------------------------------------------------------------------------
+
+## 3. The code, line by line
+
+### 3.1 `sapply()` over the columns of a data frame
+
+``` r
+library(MASS)
+pima <- Pima.tr2
+
+sapply(pima[, 1:7], mean, na.rm = TRUE)
+```
+
+    ##       npreg         glu          bp        skin         bmi         ped 
+    ##   3.7866667 123.7433333  72.3205575  29.1534653  32.0528620   0.4356567 
+    ##         age 
+    ##  33.0966667
+
+**What each piece does**
+
+- `pima[, 1:7]` keeps all rows and the first seven columns, the numeric
+  measurements. We leave out column 8, `type`, because a mean of a
+  yes/no factor makes no sense. (Lesson 14: a data frame is a list of
+  columns, which is why `sapply` can walk through them.)
+- `mean` is the function to run on each column. We write the name only,
+  **without brackets**: we are handing over the tool, not using it yet.
+- `na.rm = TRUE` is passed on to `mean` each time, so missing values are
+  skipped.
+
+**How to read the output:** one named number per column: on average
+these women had 3.79 pregnancies, glucose 123.74, blood pressure 72.32,
+skin fold 29.15, BMI 32.05, pedigree 0.44 and were 33.1 years old. This
+is the whole loop from Lesson 20, in a single line.
+
+### 3.2 Using our own function from Lesson 21
+
+``` r
+describe <- function(x) {
+  c(n       = length(x),
+    missing = sum(is.na(x)),
+    mean    = round(mean(x, na.rm = TRUE), 2),
+    sd      = round(sd(x, na.rm = TRUE), 2),
+    median  = median(x, na.rm = TRUE))
+}
+
+sapply(pima[, c("glu", "bp", "skin", "bmi")], describe)
+```
+
+    ##            glu     bp   skin    bmi
+    ## n       300.00 300.00 300.00 300.00
+    ## missing   0.00  13.00  98.00   3.00
+    ## mean    123.74  72.32  29.15  32.05
+    ## sd       30.01  11.70  11.68   6.49
+    ## median  121.00  72.00  29.00  32.00
+
+Each call to `describe` returns five numbers, so `sapply` arranges the
+results as a **matrix**: one column per variable and one row per
+statistic. It is the same table we built with the loop in Lesson 21,
+without the loop. To turn it on its side (a row per variable, more like
+a “Table 1”), add `t()` for *transpose*:
+
+``` r
+t(sapply(pima[, c("glu", "bp", "skin", "bmi")], describe))
+```
+
+    ##        n missing   mean    sd median
+    ## glu  300       0 123.74 30.01    121
+    ## bp   300      13  72.32 11.70     72
+    ## skin 300      98  29.15 11.68     29
+    ## bmi  300       3  32.05  6.49     32
+
+### 3.3 `lapply()` returns a list
+
+``` r
+ranges <- lapply(pima[, c("glu", "bp")], range, na.rm = TRUE)
+ranges
+```
+
+    ## $glu
+    ## [1]  56 199
+    ## 
+    ## $bp
+    ## [1]  38 114
+
+``` r
+ranges$glu      # lists let us pick one piece by name (Lesson 13)
+```
+
+    ## [1]  56 199
+
+`range()` returns *two* numbers (lowest and highest). `lapply` never
+tries to squash results, so you get a list with one item per column. Use
+`lapply` when the pieces have different lengths or shapes, or when you
+want to keep full control.
+
+### 3.4 `vapply()`: the careful version
+
+``` r
+vapply(pima[, 1:7], function(x) sum(is.na(x)), integer(1))
+```
+
+    ## npreg   glu    bp  skin   bmi   ped   age 
+    ##     0     0    13    98     3     0     0
+
+- `function(x) sum(is.na(x))` is a tiny function written **on the spot**
+  without a name, called an *anonymous function*. It counts the missing
+  values in `x`.
+- `integer(1)` is the promise: “each answer will be a single whole
+  number”. If a round returned text or two numbers, R would stop with an
+  error instead of quietly producing something odd.
+
+**How to read the output:** only blood pressure (13), skin fold (98) and
+BMI (3) have missing values, matching Lesson 20. In a long script,
+prefer `vapply` to `sapply` because the promise protects you from
+surprises.
+
+### 3.5 Asking questions about every column
+
+``` r
+sapply(pima, class)                    # what type is each column?
+```
+
+    ##     npreg       glu        bp      skin       bmi       ped       age      type 
+    ## "integer" "integer" "integer" "integer" "numeric" "numeric" "integer"  "factor"
+
+``` r
+numeric_cols <- sapply(pima, is.numeric)
+numeric_cols
+```
+
+    ## npreg   glu    bp  skin   bmi   ped   age  type 
+    ##  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE FALSE
+
+``` r
+names(pima)[numeric_cols]
+```
+
+    ## [1] "npreg" "glu"   "bp"    "skin"  "bmi"   "ped"   "age"
+
+`sapply(pima, class)` shows the type of each column (Lesson 6). Seven
+are numbers or integers and `type` is a factor. `is.numeric` gives TRUE
+or FALSE per column, and using that TRUE/FALSE vector inside
+`names(...)[ ]` selects the numeric ones, a handy trick for “run this on
+all numeric columns” in any new dataset.
+
+### 3.6 `apply()`: rows or columns of a matrix
+
+`apply()` needs a matrix (Lesson 12). The second argument says which
+direction: **1 = rows, 2 = columns**.
+
+``` r
+miss <- is.na(pima[, c("glu", "bp", "skin", "bmi")])   # TRUE where missing
+head(miss, 3)
+```
+
+    ##     glu    bp  skin   bmi
+    ## 1 FALSE FALSE FALSE FALSE
+    ## 2 FALSE FALSE FALSE FALSE
+    ## 3 FALSE FALSE FALSE FALSE
+
+``` r
+missing_per_woman <- apply(miss, 1, sum)   # 1 = go across each row
+table(missing_per_woman)
+```
+
+    ## missing_per_woman
+    ##   0   1   2 
+    ## 200  86  14
+
+**What each piece does**
+
+- `is.na(...)` on four columns gives a TRUE/FALSE table: TRUE marks a
+  missing value.
+- `apply(miss, 1, sum)` adds up the TRUEs **across each row**, so each
+  woman gets a count of how many of the four measurements are missing.
+- `table()` counts how many women have 0, 1, 2 or 3 missing.
+
+**How to read the output:** 200 of the 300 women have all four values;
+100 miss at least one. For any analysis that needs all four measurements
+(“complete case analysis”), we would lose one third of the women.
+Knowing this *before* modelling is exactly the kind of check Lesson 9
+trained you for.
+
+``` r
+rowSums(miss)[1:5]          # the faster ready-made version
+```
+
+    ## 1 2 3 4 5 
+    ## 0 0 0 0 0
+
+As with `colMeans`, ready-made versions exist for common jobs
+(`rowSums`, `rowMeans`, `colSums`, `colMeans`). Use `apply` when no
+ready-made version exists.
+
+### 3.7 `tapply()`: a statistic for each group
+
+First give the numeric codes readable labels (Lesson 11):
+
+``` r
+bw <- birthwt
+bw$smoke <- factor(bw$smoke, levels = c(0, 1),
+                   labels = c("Non-smoker", "Smoker"))
+bw$race  <- factor(bw$race, levels = 1:3,
+                   labels = c("White", "Black", "Other"))
+```
+
+Now the mean birth weight by smoking status:
+
+``` r
+tapply(bw$bwt, bw$smoke, mean)
+```
+
+    ## Non-smoker     Smoker 
+    ##   3055.696   2771.919
+
+**What each piece does:** `tapply(values, groups, function)` splits
+`bwt` into one pile per level of `smoke` and runs `mean` on each pile.
+
+**How to read the output:** babies of non-smoking mothers weighed 3055.7
+g on average, babies of smoking mothers 2771.9 g, a difference of about
+284 g. This matches the 3056 vs 2772 g in the Lesson 18 fact sheet.
+
+Two grouping variables give a **table**:
+
+``` r
+round(tapply(bw$bwt, list(Smoking = bw$smoke, Race = bw$race), mean), 0)
+```
+
+    ##             Race
+    ## Smoking      White Black Other
+    ##   Non-smoker  3429  2854  2816
+    ##   Smoker      2827  2504  2757
+
+``` r
+table(Smoking = bw$smoke, Race = bw$race)     # how many in each cell
+```
+
+    ##             Race
+    ## Smoking      White Black Other
+    ##   Non-smoker    44    16    55
+    ##   Smoker        52    10    12
+
+The first table shows the same direction in all three race groups:
+babies of smoking mothers weighed less. But the size of the gap differs:
+about 602 g among White mothers (3429 vs 2827), 350 g among Black
+mothers and only 59 g in the “Other” group. The second table is the
+**sanity check** every honest analyst runs. Only 10 Black mothers and 12
+“Other” mothers smoked, so those two means rest on very few babies and
+the differences between groups should not be over-read. *Always look at
+the group sizes next to the group means.*
+
+### 3.8 `split()` then `sapply()`
+
+``` r
+bmi_by_type <- split(pima$bmi, pima$type)     # a list: one vector per group
+names(bmi_by_type)
+```
+
+    ## [1] "No"  "Yes"
+
+``` r
+sapply(bmi_by_type, mean, na.rm = TRUE)
+```
+
+    ##       No      Yes 
+    ## 30.67083 34.58000
+
+``` r
+sapply(bmi_by_type, length)
+```
+
+    ##  No Yes 
+    ## 194 106
+
+`split()` cuts BMI into two vectors, one for women without diabetes
+(`No`) and one for women with it (`Yes`). `sapply` then summarises each.
+It answers the opening question: mean BMI was about 30.7 in women
+without diabetes and 34.6 in women with diabetes, in a group of 194 and
+106 women. `split` is more flexible than `tapply` because you keep the
+pieces and can feed them to any function.
+
+### 3.9 `aggregate()`: the data-frame version
+
+``` r
+aggregate(bwt ~ smoke, data = bw, FUN = mean)
+```
+
+    ##        smoke      bwt
+    ## 1 Non-smoker 3055.696
+    ## 2     Smoker 2771.919
+
+``` r
+aggregate(bmi ~ type, data = pima, FUN = mean)
+```
+
+    ##   type      bmi
+    ## 1   No 30.67083
+    ## 2  Yes 34.58000
+
+The formula `bwt ~ smoke` reads *“birth weight by smoking”*, and the
+answer comes back as a tidy data frame, ready to print, plot or save.
+Note that `aggregate` quietly **drops rows with missing values** in the
+variables used (look at the BMI result: it used the 297 women with a
+BMI). That is convenient but worth remembering.
+
+### 3.10 Choosing the right tool
+
+    Do I have a matrix and want rows or columns?          -> apply()  (or rowSums, colMeans)
+    Do I want one answer per column of a data frame?      -> sapply() / vapply()
+    Do I need a list back (different lengths)?            -> lapply()
+    Do I want one answer per group?                       -> tapply() / aggregate()
+    Do I want to keep the groups as pieces?               -> split()
+
+------------------------------------------------------------------------
+
+## 4. Common errors and how to read them
+
+| What you see | What it means | Fix |
+|----|----|----|
+| `sapply` returns a **list** instead of a vector | The function returned different lengths for different columns | Make the function return one value, or accept the list (use `lapply`) |
+| `argument "x" is missing` after writing `sapply(df, mean())` | You wrote `mean()` with brackets, so R called it with nothing | Write `mean`, no brackets |
+| `values must be length 1` from `vapply` | The function returned more than one value per column | Change the promise, e.g. `numeric(5)`, or fix the function |
+| Mean shows `NA` for a column | Missing values and no `na.rm = TRUE` | Add `na.rm = TRUE` after the function name |
+| `Warning: argument is not numeric or logical: returning NA` | You ran `mean` on a factor or text column | Select numeric columns first (Section 3.5) |
+
+------------------------------------------------------------------------
+
+## 5. Practice
+
+1.  Use `sapply` to find the **maximum** of each numeric column in
+    `Pima.tr2` (ignore missing values).
+2.  Use `tapply` to find the mean `age` of the Pima women by `type`.
+3.  Use `split` and `sapply` to find the **median** birth weight for
+    each race group in `bw`.
+4.  Use `apply` on the first 10 rows of
+    `Pima.tr2[, c("glu", "bp", "bmi")]` to find, for each woman, the
+    largest of the three values. Is the answer meaningful? Why or why
+    not?
+
+<details>
+
+<summary>
+
+Show answers
+</summary>
+
+``` r
+# 1
+sapply(pima[, 1:7], max, na.rm = TRUE)
+```
+
+    ##   npreg     glu      bp    skin     bmi     ped     age 
+    ##  14.000 199.000 114.000  99.000  52.900   2.288  72.000
+
+``` r
+# 2
+tapply(pima$age, pima$type, mean)
+```
+
+    ##       No      Yes 
+    ## 31.11340 36.72642
+
+``` r
+# 3
+sapply(split(bw$bwt, bw$race), median)
+```
+
+    ## White Black Other 
+    ##  3062  2849  2835
+
+``` r
+# 4
+apply(as.matrix(pima[1:10, c("glu", "bp", "bmi")]), 1, max, na.rm = TRUE)
+```
+
+    ##   1   2   3   4   5   6   7   8   9  10 
+    ##  86 195  82 165 107  97  83 193 142 128
+
+``` r
+# Not meaningful: glucose (mg/dl), blood pressure (mm Hg) and BMI are
+# measured on different scales, so the "largest" is almost always glucose.
+# Row-wise summaries only make sense for columns in the same units.
+```
+
+</details>
+
+------------------------------------------------------------------------
+
+## 6. Recap
+
+- `sapply(x, f, ...)` runs `f` on each column or element and tidies the
+  result; `lapply` returns a list; `vapply` adds a type promise.
+- Give the function **without brackets**; extra arguments such as
+  `na.rm = TRUE` go after it.
+- `apply(m, 1, f)` works across rows, `apply(m, 2, f)` down columns.
+- `tapply`, `split` and `aggregate` summarise by group; always check the
+  group sizes beside the group means.
+- Prefer ready-made `rowSums`, `colMeans` when they exist.
+
+## 7. What comes next
+
+That completes **Module 5: Programming with R**. You can now make R
+decide, repeat, reuse and summarise by group. In **Level 2, Module 6**
+we turn to tidy data and the tidyverse packages. Those use the same
+ideas, `function`, groups, columns, with friendlier names.
+
+**My own idea for you:** take any column you care about from your own
+work and ask the three questions this module taught: *how many are
+missing* (`vapply`), *what is it by group* (`tapply`), and *what is the
+group size* (`table`). Make that your standard first look at every new
+dataset.
